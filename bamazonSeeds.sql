@@ -2,7 +2,7 @@ USE Bamazon;
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity) 
 VALUES 
-(1, 'HP Wireless Mouse', 'Computers', 9.99, 100),
+    (1, 'HP Wireless Mouse', 'Computers', 9.99, 100),
     (2, 'Neutrogena Acne Cream', 'Beauty', 4.99, 200),
     (3, 'CAT Toy Truck', 'Toys', 7.99, 100),
     (4, 'Dom Perignon Champagne', 'Wine', 195.00, 25),
