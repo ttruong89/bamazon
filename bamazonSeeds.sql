@@ -1,15 +1,4 @@
-CREATE DATABASE IF NOT EXISTS Bamazon;
-
 USE Bamazon;
-
-CREATE TABLE IF NOT EXISTS products (
-	item_id INT(11) NOT NULL AUTO_INCREMENT,
-    product_name VARCHAR(100) NOT NULL,
-    department_name VARCHAR(45),
-    price DECIMAL(5,2) NOT NULL,
-    stock_quantity INT(10) UNSIGNED NOT NULL,
-    PRIMARY KEY (item_id)
-);
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity) 
 VALUES 
@@ -23,3 +12,5 @@ VALUES
     (8, 'Playstation Game Console', 'Video Games', 182.50, 50),
     (9, 'Lyork Vibrator', 'Sex Toys', 19.50, 50),
     (10, 'Bose Soundlink', 'Computer', 185.90, 100);
+    
+SELECT * FROM products;
