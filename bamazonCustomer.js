@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
 	host: "localhost",
 	port: 3306,
 	user: "root",
-	password: "*******",
+	password: "maury210",
 	database: "Bamazon"
 });
 // Connection to server.
@@ -90,8 +90,8 @@ function customerQuery() {
 				var cost = quantity * price;
 			// Total cost of customer purchases.
 			totalCost = totalCost + cost;
-			// Console total cost of purchases.
-			console.log("Total: $" + totalCost);
+			// Console total cost of purchases.  Round the value down.
+			console.log("Total: $" + totalCost.toFixed(2));
 			// UPDATE stock quantity of database after checkout.
 			connection.query("UPDATE products SET ? WHERE ?", [{stock_quantity: totalStock}, {item_id: item}], function(err, res) {});
 			// Prompts here.
